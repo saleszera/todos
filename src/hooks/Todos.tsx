@@ -1,7 +1,5 @@
 import React, {createContext, useCallback, useContext, useMemo, useState} from 'react'
 
-type FilterProps = 'pending' | 'concluded' | 'all'
-
 interface ITodosContext {
   filter: FilterProps
   setFilter: React.Dispatch<React.SetStateAction<FilterProps>>
@@ -15,7 +13,7 @@ interface ITodosProvider {
   children: React.ReactNode
 }
 
-const TodosContext = createContext<ITodosContext>({} as ITodosContext)
+export const TodosContext = createContext<ITodosContext>({} as ITodosContext)
 
 export const TodosProvider: React.FC<ITodosProvider> = ({children}) => {
   const [todos, setTodos] = useState<ITodo[]>([])
