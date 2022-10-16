@@ -1,0 +1,62 @@
+@keyframes done {
+  from {
+    font-size: 38px;
+  }
+  to {
+    font-size: var(--text);
+    color: var(--green)
+  }
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: var(--spacing-2);
+
+  font-size: var(--text);
+  text-transform: capitalize;
+  letter-spacing: var(--spacing-1);
+
+  animation: show 0.5s ease-in-out;
+  transition: filter 0.2s ease-in-out;
+
+  cursor: pointer;
+}
+
+.card:hover {
+  filter: brightness(0.8);
+}
+
+.card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  transition: background-color,color 0.15s ease-in;
+}
+
+.card button:hover {
+  opacity: 1; 
+
+  background-color: var(--black-600);
+  color: var(--red);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-6);
+}
+
+.concluded p {
+  text-decoration: line-through;
+}
+
+.concluded svg{
+  animation: done 0.5s ease-in-out forwards;
+}
