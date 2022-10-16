@@ -16,6 +16,10 @@ footer {
   font-weight: bold;
 }
 
+.filter {
+  outline: none;
+}
+
 .filter.active::before {
   content: '';
   border: 1px solid var(--red); 

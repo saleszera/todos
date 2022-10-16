@@ -14,7 +14,7 @@ const Card: React.FC<ITodo> = ({isFinished, name}) => {
         <p>{name}</p>
       </div>
 
-      <button onClick={() => onDeleteTodo(name)}>
+      <button data-message="delete todo" onClick={() => onDeleteTodo(name)}>
         <Trash />
       </button>
     </li>
