@@ -3,7 +3,7 @@ import { Controller, useFormContext } from 'react-hook-form';
 
 import './styles.css'
 
-interface IInput {
+export interface IInput {
   name: string;
 }
 
